@@ -1,9 +1,9 @@
-use super::{sort, Sorter};
+use super::{Sorter};
 
 pub struct  BubbleSort;
 
 impl Sorter for BubbleSort{
-    fn sort<T>(slice: &mut [T])
+    fn sort<T>(&self, slice: &mut [T])
     where
         T: Ord,
     {
@@ -31,6 +31,6 @@ impl Sorter for BubbleSort{
 #[test]
 fn bubble_sort_works() {
     let mut things = vec![4, 2, 3, 1];
-    sort::<_, BubbleSort>(&mut things);
+    BubbleSort.sort(&mut things);
     assert_eq!(things, &[1,2,3,4]);
 }
