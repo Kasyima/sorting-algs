@@ -5,7 +5,7 @@ pub struct  BubbleSort;
 impl Sorter for BubbleSort{
     fn sort<T>(&self, slice: &mut [T])
     where
-        T: Ord,
+        T: Ord + std::fmt::Display,
     {
         let mut swapped = true;
 

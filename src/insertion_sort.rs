@@ -7,7 +7,7 @@ pub struct InsertionSort{
 impl Sorter for InsertionSort {
     fn sort<T>(&self, slice: &mut [T])
     where
-        T: Ord,
+        T: Ord + std::fmt::Display,
     {
         // [ sorted | not sorted ]
         // let self.smart = false;
